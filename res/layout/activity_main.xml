@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="me.uyuyuy99.mainroom.MainActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <SurfaceView
+            android:id="@+id/preview"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="-1sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="24sp"
+            android:gravity="center"
+            android:keepScreenOn="true"
+            android:text="12-25-2014"
+            android:textColor="#ffffff"
+            android:textSize="192sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="481dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="-64sp"
+            android:gravity="center|top"
+            android:keepScreenOn="true"
+            android:text="12:30"
+            android:textColor="#ffffff"
+            android:textSize="448sp" />
+
+    </FrameLayout>
+
+</FrameLayout>
