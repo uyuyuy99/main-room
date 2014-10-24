@@ -32,19 +32,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="24sp"
+            android:layout_marginBottom="-20sp"
             android:gravity="center"
             android:keepScreenOn="true"
             android:text="12-25-2014"
             android:textColor="#ffffff"
-            android:textSize="192sp" />
+            android:textSize="160sp" />
 
         <TextView
             android:id="@+id/time"
             android:layout_width="match_parent"
             android:layout_height="481dp"
             android:layout_gravity="top"
-            android:layout_marginTop="-64sp"
+            android:layout_marginTop="-128sp"
             android:gravity="center|top"
             android:keepScreenOn="true"
             android:text="12:30"

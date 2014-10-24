@@ -2,7 +2,6 @@ package me.uyuyuy99.mainroom.motiondetection.data;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-
 /**
  * This class is used to store global data.
  * 

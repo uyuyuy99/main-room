@@ -28,29 +28,30 @@ public class CalendarContentResolver {
 	public CalendarContentResolver(Context ctx) {
 		contentResolver = ctx.getContentResolver();
 	}
-	
+
 	public Set<CalEvent> getEvents() {
-		// Fetch a list of all calendars sync'd with the device and their display names
-		Cursor cursor = contentResolver.query(CALENDAR_URI, FIELDS, null, null,
-				null);
-	
+		// Fetch a list of all calendars sync'd with the device and their
+		// display names
+		Cursor cursor = contentResolver.query(CALENDAR_URI, FIELDS, null, null, null);
+		
 		try {
 			if (cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
 					String title = cursor.getString(0);
 					long time = cursor.getLong(1);
-					
+
 					long now = System.currentTimeMillis();
 					if (time > now && (time - now) < timeLimit) {
 						CalEvent calEvent = new CalEvent(title, time);
-						
+
 						if (!CalendarActivity.skipped.contains(calEvent)) {
 							calendars.add(calEvent);
 						}
 					}
 				}
 			}
-		} catch (AssertionError ex) {}
+		} catch (AssertionError ex) {
+		}
 		return calendars;
 	}
 	

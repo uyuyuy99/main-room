@@ -41,8 +41,6 @@ public class ResumeService extends Service {
 			}
 		}, 5, 5, TimeUnit.MINUTES);
 		
-//		Log.e("ResumeService", "dumbbbbbbbbbbbbbbbbbbbbbbbbb");
-		
 		 final IntentFilter filter = new IntentFilter();
 		 filter.addAction(Intent.ACTION_SCREEN_ON);
         filter.addAction(Intent.ACTION_SCREEN_OFF);
@@ -63,8 +61,8 @@ public class ResumeService extends Service {
             // YOUR CODE
 //        	MotionDetectionActivity.testing = new Random().nextInt(1000);
         	if (!firstTimeBooting) {
-        		Intent LaunchIntent = getPackageManager().getLaunchIntentForPackage("me.uyuyuy99.mainroom");
-    			startActivity(LaunchIntent);
+//        		Intent LaunchIntent = getPackageManager().getLaunchIntentForPackage("me.uyuyuy99.mainroom");
+//    			startActivity(LaunchIntent);
         	} else {
         		firstTimeBooting = false;
         	}

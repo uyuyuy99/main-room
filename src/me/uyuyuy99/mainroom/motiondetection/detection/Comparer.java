@@ -2,7 +2,6 @@ package me.uyuyuy99.mainroom.motiondetection.detection;
 
 import android.graphics.Color;
 
-
 /**
  * This class is adapted from the web site below. It is used to compare two
  * State objects.

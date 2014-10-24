@@ -61,6 +61,7 @@ public class MotionDetectionActivity extends SensorsActivity {
 	private TextView txtTime, txtDate;
 	public static boolean exiting = false;
 	
+//	/*DEBUG*/ private String whatever = "default";
 //	/*DEBUG*/ public static int testing = 11;
 	
 	/**

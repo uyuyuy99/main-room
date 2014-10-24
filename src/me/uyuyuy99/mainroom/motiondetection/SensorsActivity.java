@@ -1,11 +1,10 @@
 package me.uyuyuy99.mainroom.motiondetection;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import me.uyuyuy99.mainroom.motiondetection.data.GlobalData;
-
-
 import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -13,7 +12,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
-
 
 /**
  * This class extends Activity and processes sensor data and location data. It
@@ -68,10 +66,12 @@ public class SensorsActivity extends Activity implements SensorEventListener {
         try {
             sensorMgr = (SensorManager) getSystemService(SENSOR_SERVICE);
 
-            sensors = sensorMgr.getSensorList(Sensor.TYPE_ACCELEROMETER);
+//            sensors = sensorMgr.getSensorList(Sensor.TYPE_ACCELEROMETER);
+            sensors = new ArrayList<Sensor>();
             if (sensors.size() > 0) sensorGrav = sensors.get(0);
 
-            sensors = sensorMgr.getSensorList(Sensor.TYPE_MAGNETIC_FIELD);
+//            sensors = sensorMgr.getSensorList(Sensor.TYPE_MAGNETIC_FIELD);
+            sensors = new ArrayList<Sensor>();
             if (sensors.size() > 0) sensorMag = sensors.get(0);
 
             sensorMgr.registerListener(this, sensorGrav, SensorManager.SENSOR_DELAY_NORMAL);
